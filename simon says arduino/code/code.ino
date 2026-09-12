@@ -1,10 +1,24 @@
-// name all 4 led pins output in a list [0:3]
-// name all 4 botton pins (input out?) in a list [0:3]
-// name buzzer pin output
 
+// name all 4 led pins output in a list [0:3]                 
+int ledpins[4] = {2, 3, 4, 5};//{blue, yellow, red, green}
+
+// name all 4 botton pins (input out?) in a list [0:3]
+int btnpins[4] = {7, 8, 9, 10};//{blue, yellow, red, green}
+
+// name buzzer pin output
+int buzzer = 6; 
 
 void setup() {
   // put your setup code here, to run once:
+  Serial.begin(9600);
+  //add pinmode to each pin
+  for(int i = 0; i < 4; i++){
+    pinMode(ledpins[i], OUTPUT);
+  }
+  
+  for(int i = 0; i < 4; i++){
+    pinMode(btnpins[i], );
+  }
 
   // make an empty list {} name the_sequince
 }
